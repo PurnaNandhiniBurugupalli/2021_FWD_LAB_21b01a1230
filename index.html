@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+          .sub{
+                 width: 8em;
+                 height: 2em;
+                 background-color: blue;
+                 border-radius: 15px;
+                 margin-left: 40px;
+                 margin-top: 10px;
+          }
+
+
+    </style>
+    <script>
+        function validation(){
+            let name=document.getElementById('name')
+            let pw=document.getElementById('pword')
+            let mail=document.getElementById('mail')
+            let pn=document.getElementById('pno')
+            if(name.value==""||name.value.length<6)
+            {
+              if(name.value=="")
+              {
+                     alert("please fill the name")
+                     return false
+              }
+              if(name.value.length<6){
+                     alert("name should not be lessthan 6 characters")
+                     return false
+              }
+            }
+            if(pw.value==""||pw.value.length<6)
+            {
+              if(pw.value=="")
+              {
+                     alert("please fill the password")
+                     return false
+              }
+              if(pw.value.length<6){
+                     alert("password should not be lessthan 6 characters")
+                     return false
+              }
+            }
+            if(mail.value=="")
+            {
+                     alert("please fill the email")
+                     return false
+              }
+            if(pn.value==""||pn.value.length>10)
+            {
+              if(pn.value=="")
+              {
+                     alert("please fill the phone number")
+                     return false
+              }
+              if(pn.value.length>10||pn.value.length<10){
+                    if(pn.value.length>10){
+                       alert("phone number consists of 10 digits")
+                    }
+                    if(pn.value.length<10){
+                       alert("phone number consists of 10 digits")
+                    }
+              }
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+     
+</head>
+<body>
+       <table>
+             <form action="success.html" onsubmit="return validation()">
+                  <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="" id="name"></td>
+                  </tr>
+                  <tr>
+                      <td>Password</td>
+                      <td><input type="password" name="" id="pword"></td>
+                  </tr>
+                  <tr>
+                         <td>E-mail</td>
+                         <td><input type="email" name="" id="mail"></td>
+                  </tr>
+                  <tr>
+                         <td>Mobile Number</td>
+                         <td><input type="number" name="" id="pno"></td>
+                  </tr>
+                <tr>
+                     <td colspan="10"><input type="submit" value="submit" class="sub"></td>
+                </tr>
+            </form>
+
+       </table>
+      
+</body>
+</html>
